@@ -73,3 +73,20 @@ Generated entries will preserve:
 - rule version
 
 - review status
+
+## Running the Preliminary Prototype
+
+Requirements:
+
+- Python 3
+- No external Python packages are required
+
+Run the prototype from the repository root:
+
+```cmd
+python 04_Source_Code\risk_mapper.py --input 05_Data_or_Sample_Input\sample_iam_findings.csv --config 04_Source_Code\config.json --output 06_Results_or_Expected_Output\illustrative_risk_register_output.json
+
+
+The generated output will be saved in:
+
+06_Results_or_Expected_Output/illustrative_risk_register_output.json
