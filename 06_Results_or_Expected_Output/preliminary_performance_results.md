@@ -28,6 +28,30 @@ The test evaluates the mapping engine only and does not represent complete end-t
 
 
 
+\## Test Method
+
+
+
+The `performance\_test.py` script repeatedly processes a representative synthetic IAM finding using the same rule-based mapping function implemented in `risk\_mapper.py`.
+
+
+
+A total of 10,000 mapping operations were executed.
+
+
+
+The test measures:
+
+
+
+\- total processing time
+
+\- average processing time per finding
+
+\- approximate findings processed per second
+
+
+
 \## Preliminary Result
 
 
@@ -44,19 +68,23 @@ The test evaluates the mapping engine only and does not represent complete end-t
 
 
 
-The preliminary result shows that the prototype mapping function can process the project-defined mapping rules with low computational overhead in the current test environment.
+The preliminary result shows that the prototype mapping function can process the current project-defined mapping rules with low computational overhead in the tested environment.
 
 
 
-The result demonstrates preliminary technical feasibility only.
+The result provides preliminary evidence of technical feasibility for the mapping component.
 
 
 
-\## Limitation
+It should not be interpreted as the final performance of the completed proposed system.
 
 
 
-This benchmark measures the in-memory risk-mapping function.
+\## Limitations
+
+
+
+This benchmark measures the in-memory risk-mapping function only.
 
 
 
@@ -74,9 +102,29 @@ It does not include:
 
 \- network communication
 
+\- authentication or access-control processing
+
 \- analyst review and confirmation time
 
 
 
-Therefore, the reported throughput should not be interpreted as the final end-to-end performance of the proposed system.
+The performance result was also obtained from a single local test environment.
+
+
+
+Therefore, the reported throughput should not be interpreted as final end-to-end system performance or as a general performance guarantee.
+
+
+
+\## Reproducibility
+
+
+
+The performance test can be executed from the repository root using:
+
+
+
+```cmd
+
+python 04\_Source\_Code\\performance\_test.py
 
