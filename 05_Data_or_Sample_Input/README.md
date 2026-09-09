@@ -1,3 +1,7 @@
+## Data Origin
+
+The sample records are researcher-created synthetic IAM scenarios informed by the IAM and access-control issues identified in the literature review. They are designed for controlled prototype demonstration and evaluation and are not presented as real organisational data.
+
 \# Sample IAM Findings
 
 
