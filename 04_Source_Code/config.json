@@ -1,0 +1,64 @@
+{
+  "rule_version": "1.0",
+  "risk_matrix": {
+    "likelihood": {
+      "1": "Rare",
+      "2": "Possible",
+      "3": "Likely"
+    },
+    "impact": {
+      "1": "Low",
+      "2": "Moderate",
+      "3": "High"
+    },
+    "risk_levels": {
+      "1-2": "Low",
+      "3-4": "Medium",
+      "6-9": "High"
+    }
+  },
+  "finding_mappings": {
+    "excessive_privilege": {
+      "control_mapping": [
+        "Access Control",
+        "Identity Management",
+        "Access Review"
+      ],
+      "recommended_treatment": "Review and remove privileges that are not required for the approved business role."
+    },
+    "privilege_creep": {
+      "control_mapping": [
+        "Identity Management",
+        "Access Review"
+      ],
+      "recommended_treatment": "Review entitlements and revoke permissions that are no longer required."
+    },
+    "inappropriate_permission": {
+      "control_mapping": [
+        "Access Control",
+        "Access Review"
+      ],
+      "recommended_treatment": "Validate the business requirement and correct inappropriate permissions."
+    },
+    "abnormal_access": {
+      "control_mapping": [
+        "Authentication",
+        "Logging and Monitoring"
+      ],
+      "recommended_treatment": "Review the access context and strengthen authentication or monitoring where justified."
+    },
+    "unowned_account": {
+      "control_mapping": [
+        "Identity Management",
+        "Accountability"
+      ],
+      "recommended_treatment": "Assign an accountable owner or disable the account if continued access cannot be justified."
+    }
+  },
+  "review_rules": {
+    "unsupported_finding_type": "Needs Review",
+    "missing_owner_context": "TBD - analyst assignment required",
+    "missing_required_context": "Needs Review",
+    "default_review_status": "Pending Confirmation"
+  }
+}

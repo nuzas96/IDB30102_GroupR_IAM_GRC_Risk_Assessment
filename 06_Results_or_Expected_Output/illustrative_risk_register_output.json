@@ -1,0 +1,113 @@
+[
+  {
+    "risk_id": "RISK-IAM-001",
+    "source_finding_id": "IAM-001",
+    "finding_type": "excessive_privilege",
+    "risk_description": "Excessive privilege affecting Finance Reporting Server. Potential business consequence: Unauthorised modification of critical finance data.",
+    "affected_asset": "Finance Reporting Server",
+    "likelihood": 2,
+    "impact": 3,
+    "risk_score": 6,
+    "risk_level": "High",
+    "priority": "High",
+    "risk_owner": "Finance System Owner",
+    "control_mapping": [
+      "Access Control",
+      "Identity Management",
+      "Access Review"
+    ],
+    "recommended_treatment": "Review and remove privileges that are not required for the approved business role.",
+    "assessment_rationale": "Privilege level exceeds the access required for the stated business role",
+    "evidence_reference": "Access Review",
+    "review_status": "Pending Confirmation",
+    "rule_version": "1.0"
+  },
+  {
+    "risk_id": "RISK-IAM-002",
+    "source_finding_id": "IAM-002",
+    "finding_type": "privilege_creep",
+    "risk_description": "Privilege creep affecting HR Management System. Potential business consequence: Unauthorised payroll approval or employee data changes.",
+    "affected_asset": "HR Management System",
+    "likelihood": 2,
+    "impact": 3,
+    "risk_score": 6,
+    "risk_level": "High",
+    "priority": "High",
+    "risk_owner": "HR System Owner",
+    "control_mapping": [
+      "Identity Management",
+      "Access Review"
+    ],
+    "recommended_treatment": "Review entitlements and revoke permissions that are no longer required.",
+    "assessment_rationale": "Historical role change indicates that the current entitlement may no longer be required",
+    "evidence_reference": "Identity Review",
+    "review_status": "Pending Confirmation",
+    "rule_version": "1.0"
+  },
+  {
+    "risk_id": "RISK-IAM-003",
+    "source_finding_id": "IAM-003",
+    "finding_type": "inappropriate_permission",
+    "risk_description": "Inappropriate permission affecting Customer Database. Potential business consequence: Unauthorised modification of customer records.",
+    "affected_asset": "Customer Database",
+    "likelihood": 2,
+    "impact": 3,
+    "risk_score": 6,
+    "risk_level": "High",
+    "priority": "High",
+    "risk_owner": "Customer Data Owner",
+    "control_mapping": [
+      "Access Control",
+      "Access Review"
+    ],
+    "recommended_treatment": "Validate the business requirement and correct inappropriate permissions.",
+    "assessment_rationale": "Granted permission exceeds the documented business requirement",
+    "evidence_reference": "Permission Review",
+    "review_status": "Pending Confirmation",
+    "rule_version": "1.0"
+  },
+  {
+    "risk_id": "RISK-IAM-004",
+    "source_finding_id": "IAM-004",
+    "finding_type": "abnormal_access",
+    "risk_description": "Abnormal access affecting Operations Portal. Potential business consequence: Potential misuse of privileged operational access.",
+    "affected_asset": "Operations Portal",
+    "likelihood": 2,
+    "impact": 3,
+    "risk_score": 6,
+    "risk_level": "High",
+    "priority": "High",
+    "risk_owner": "Operations Manager",
+    "control_mapping": [
+      "Authentication",
+      "Logging and Monitoring"
+    ],
+    "recommended_treatment": "Review the access context and strengthen authentication or monitoring where justified.",
+    "assessment_rationale": "Observed access pattern requires contextual analyst review before organisational risk is confirmed",
+    "evidence_reference": "Authentication Log Review",
+    "review_status": "Pending Confirmation",
+    "rule_version": "1.0"
+  },
+  {
+    "risk_id": "RISK-IAM-005",
+    "source_finding_id": "IAM-005",
+    "finding_type": "unowned_account",
+    "risk_description": "Unowned account affecting Legacy Integration Server. Potential business consequence: Unmanaged account may retain access without accountable oversight.",
+    "affected_asset": "Legacy Integration Server",
+    "likelihood": 2,
+    "impact": 2,
+    "risk_score": 4,
+    "risk_level": "Medium",
+    "priority": "Medium",
+    "risk_owner": "TBD - analyst assignment required",
+    "control_mapping": [
+      "Identity Management",
+      "Accountability"
+    ],
+    "recommended_treatment": "Assign an accountable owner or disable the account if continued access cannot be justified.",
+    "assessment_rationale": "Account ownership cannot be verified and requires organisational confirmation",
+    "evidence_reference": "Account Inventory Review",
+    "review_status": "Pending Confirmation",
+    "rule_version": "1.0"
+  }
+]
