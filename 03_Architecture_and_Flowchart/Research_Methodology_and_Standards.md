@@ -2,78 +2,102 @@
 
 ## Research Context
 
-This research focuses on the development and evaluation of an integrated Identity and Access Management–Governance, Risk and Compliance (IAM–GRC) risk assessment framework. The framework is intended to map technical IAM and access-control risks to formal organisational risk information, including likelihood, impact, risk level, risk owner, applicable controls, treatment and residual risk.
+This research focuses on developing and testing a prototype Identity and Access Management risk mapping system. The prototype will receive previously identified technical access-control findings and convert them into structured and prioritised organisational risk-register entries. The prototype does not detect Identity and Access Management issues. Its purpose is to map technical findings to organisational risk information such as likelihood, impact, risk level, priority, proposed risk owner, relevant controls and proposed treatment.
 
 ## Selected Research Methodology
 
-The selected research methodology is **Threat Modelling and Risk Assessment**. It will be used to identify, analyse, evaluate and document IAM-related risks within an organisational GRC context.
+The selected research methodology is **Design Science Research**. This methodology is suitable because the research aims to solve an identified organisational problem by designing, developing and evaluating a practical artefact. The artefact produced by this research will be a prototype Identity and Access Management risk mapping system.
 
-Representative risks within the research scope include:
+Risk Assessment will be used as a supporting technique to assess and prioritise representative technical access-control findings.
 
-* Excessive privileges
+Supported finding types include:
+
+* Excessive privilege
 * Privilege creep
-* Inappropriate permissions
-* Abnormal or risky access
-* Unclear ownership of accounts or access rights
-* Identity-governance findings
+* Inappropriate permission
+* Abnormal access
+* Unowned account
 
 ## Development Model
 
-**Not Applicable**
+The selected development model is **Prototyping**.
 
-The primary research outcome is a risk assessment framework rather than a complete software system or application. Any preliminary technical component included in the repository will demonstrate the feasibility and structure of the proposed framework, rather than represent full software development.
+The Prototyping model will guide the incremental construction, testing and refinement of the proposed system. An initial prototype will be developed to accept representative technical access-control findings and map them to structured risk-register information. Testing feedback will be used to refine the input structure, validation rules, mapping logic and generated outputs.
 
 ## Methodology Justification
 
-Assignment 1 identified that existing technical approaches can detect excessive permissions, suspicious access and other identity-related risks. However, their outputs are not always connected clearly to formal organisational GRC processes. Threat Modelling and Risk Assessment is therefore suitable because it allows technical evidence to be examined together with likelihood, impact and organisational context. It also supports the mapping of each risk to an accountable owner, relevant controls, suitable treatment actions and a formal risk-register entry.
+Design Science Research is suitable because the study aims to solve an identified organisational problem by developing and testing a practical artefact. The literature review shows that existing approaches can identify excessive privileges, suspicious access and other identity-related risks, but their technical outputs are not consistently converted into formal organisational risk-register information through an IAM-specific, traceable and tested implementation. Design Science Research provides a structured process for defining this problem, establishing solution objectives, developing the prototype and evaluating its performance. The Prototyping model complements this methodology by allowing the system to be constructed incrementally, tested using representative scenarios and refined according to the identified requirements. Together, Design Science Research and the Prototyping model support all three research objectives and enable the proposed system to be assessed using measurable functionality, security, risk-mapping and performance criteria.
+
+## Design Science Research Phases
+
+### Phase 1: Problem Identification and Motivation
+
+Define the problem identified through the literature review: technical Identity and Access Management findings are not consistently translated into structured organisational risk information through an IAM-specific, traceable and tested implementation. The importance of connecting technical findings to formal organisational risk registers will also be established.
+
+### Phase 2: Define Objectives of a Solution
+
+Determine the requirements and objectives of the proposed system. The system must convert previously identified technical access-control findings into structured and prioritised risk-register entries containing relevant organisational risk information.
+
+### Phase 3: Design and Development
+
+Design the system architecture, process flow, input and output structures, validation rules and risk-mapping logic. A prototype will then be developed to process representative Identity and Access Management findings and generate the required risk-register output.
+
+### Phase 4: Demonstration
+
+Process representative scenarios through the prototype, including excessive privilege, privilege creep, inappropriate permission, abnormal access and unowned account. The generated entries will demonstrate how technical findings are mapped to organisational risk information.
+
+### Phase 5: Evaluation
+
+Test the prototype using defined functionality, security, risk-mapping and performance criteria. The evaluation will examine whether the generated entries are complete, consistent, prioritised and traceable to the original technical findings and relevant controls.
+
+### Phase 6: Communication
+
+Document the research process, prototype design, demonstration scenarios, evaluation results and limitations. The work will be communicated through the final report, GitHub repository and project presentation.
+
+## Risk Assessment as a Supporting Technique
+
+Risk Assessment will provide the logic used to assess and prioritise technical access-control findings. For each representative finding, the prototype will use predefined likelihood and impact criteria to determine its risk score, risk level and priority. The finding will then be mapped to a proposed risk owner, relevant controls and proposed treatment.
+
+The prototype will use the following project-defined scoring method:
+
+**Risk Score = Likelihood × Impact**
+
+Likelihood and impact will each use a three-point scale:
+
+* 1 = Rare or Low
+* 2 = Possible or Moderate
+* 3 = Likely or High
+
+The resulting risk levels are:
+
+* 1–2 = Low
+* 3–4 = Medium
+* 6–9 = High
+
+This is a project-defined 3 × 3 risk matrix and is not presented as an ISO-mandated scoring formula. A generated entry must undergo analyst review before it can be treated as final. Residual risk will not be presented as a verified output unless treatment has been implemented and the risk has been reassessed.
 
 ## Standards
 
-The proposed methodology is guided by the following standards:
+The proposed system will be guided by the following standards:
 
-* **ISO/IEC 27005:2022** – Provides guidance for managing information security risks, including risk identification, analysis, evaluation and treatment.
-* **ISO/IEC 27001:2022** – Provides the Information Security Management System context for documenting, reviewing and treating organisational risks.
-* **ISO/IEC 27002:2022** – Provides information security controls that can be used when mapping identified IAM risks to relevant control measures.
+* **ISO/IEC 27005:2022** – Guides the identification, analysis, evaluation and treatment of information security risks.
+* **ISO/IEC 27001:2022** – Provides the Information Security Management System context for documenting risks and selecting appropriate controls.
+* **ISO/IEC 27002:2022** – Provides guidance for mapping Identity and Access Management findings to relevant information security controls.
 
-Together, these standards provide a recognised foundation for connecting technical access-control evidence with organisational risk and control practices.
-
-## Proposed Methodology Phases
-
-### Phase 1: Context and Requirements Analysis
-
-Establish the scope, organisational context and requirements of the proposed framework. Requirements for translating technical IAM findings into GRC risk information will be derived from the Assignment 1 literature review and relevant ISO standards.
-
-### Phase 2: IAM Risk Identification
-
-Identify representative IAM risks and document the available technical evidence, affected assets, possible threat events and potential organisational consequences associated with each risk.
-
-### Phase 3: Risk Analysis and Evaluation
-
-Analyse the identified IAM risks using defined likelihood and impact criteria. The resulting risk levels will be evaluated and prioritised according to their organisational significance.
-
-### Phase 4: IAM–GRC Framework Design and Mapping
-
-Design the proposed framework and map each IAM risk to its likelihood, impact, risk level, risk owner, relevant controls, proposed treatment and residual risk.
-
-### Phase 5: Scenario-Based Framework Evaluation
-
-Evaluate the framework using representative IAM risk scenarios. Each scenario will be processed using the proposed mapping structure to determine whether technical IAM evidence can be translated into structured risk-register and control-mapping information.
-
-### Phase 6: Documentation and Communication
-
-Document the proposed framework, methodology, scenario mappings, evaluation results, limitations and recommendations for future improvement.
+These standards provide a recognised foundation for connecting technical access-control findings with organisational risk-management and control practices. Specific ISO control identifiers will not be used until they have been verified using authorised standard text.
 
 ## Alignment with Research Objectives
 
-| Research Objective                                                                                                             | Supporting Methodology Phases |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| **RO1:** Analyse the requirements for mapping technical IAM and access-control risk evidence to formal GRC risk elements.      | Phases 1, 2 and 3             |
-| **RO2:** Design an integrated IAM–GRC risk assessment framework.                                                               | Phase 4                       |
-| **RO3:** Evaluate the proposed framework using representative IAM risk scenarios and established governance and risk criteria. | Phases 5 and 6                |
+| Research Objective                                                                                                                                      | Supporting Methodology Activities                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **RO1:** To study existing Identity and Access Management risk-assessment methods for organisational risk management.                                   | Design Science Research Phases 1 and 2: identify the problem, review existing methods and define the system requirements.            |
+| **RO2:** To develop a prototype Identity and Access Management risk mapping system for structured and prioritised organisational risk-register entries. | Design Science Research Phase 3 and the Prototyping model: design, develop and refine the proposed system.                           |
+| **RO3:** To test the functionality and security of the prototype using defined risk-mapping and performance criteria.                                   | Design Science Research Phases 4 and 5: demonstrate the prototype using representative scenarios and evaluate the resulting outputs. |
 
 ## References
 
-* International Organization for Standardization. (2022). *ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection—Information security management systems—Requirements*. https://www.iso.org/standard/27001
-* International Organization for Standardization. (2022). *ISO/IEC 27002:2022 Information security, cybersecurity and privacy protection—Information security controls*. https://www.iso.org/standard/75652.html
-* International Organization for Standardization. (2022). *ISO/IEC 27005:2022 Information security, cybersecurity and privacy protection—Guidance on managing information security risks*. https://www.iso.org/standard/80585.html
-
+* International Organization for Standardization. (2022a). *Information security, cybersecurity and privacy protection—Guidance on managing information security risks (ISO/IEC Standard No. 27005:2022).* https://www.iso.org/standard/80585.html
+* International Organization for Standardization. (2022b). *Information security, cybersecurity and privacy protection—Information security controls (ISO/IEC Standard No. 27002:2022).* https://www.iso.org/standard/75652.html
+* International Organization for Standardization. (2022c). *Information security, cybersecurity and privacy protection—Information security management systems—Requirements (ISO/IEC Standard No. 27001:2022).* https://www.iso.org/standard/27001.html
+* Peffers, K., Tuunanen, T., Rothenberger, M. A., and Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems, 24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302
+* UniKL MIIT. (2026). *Research methodology selection handbook* [Course handbook].
